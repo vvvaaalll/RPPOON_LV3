@@ -6,6 +6,6 @@ namespace RPPOON_LV3
 {
     interface IPrototype
     {
-        IPrototype Clone();
+       public IPrototype Clone();
     }
 }

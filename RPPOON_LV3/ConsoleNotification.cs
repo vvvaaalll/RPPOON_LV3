@@ -6,7 +6,7 @@ namespace RPPOON_LV3
 {
     public enum Category { ERROR, ALERT, INFO }
 
-    public class ConsoleNotification
+    public class ConsoleNotification : IPrototype
     {
         public String Author { get; private set; }
         public String Title { get; private set; }
@@ -26,6 +26,19 @@ namespace RPPOON_LV3
             this.Level = level;
             this.Color = color;
         }
+
+        IPrototype IPrototype.Clone()
+        {
+            
+                return (IPrototype)this.MemberwiseClone();
+            
+        }
+
+        //u navedenom primjeru primjeru velika je razlika u korištenju dubokog i plitkog kopiranja obzirom da se svaka 
+        //vrijednost/varijbla može mijenjati. čime bi kod plitkog kopiranja, promjenom vrijednosti u jednoj kopiji, mijenjaju se sve 
+        // (obzirom da se referenciraju na isti podatak). dok kod dubokog kopiranja stvaramo potpuno nove podatke koje možemo odvojeno izmjenjivati
+
+
     }
 
 }

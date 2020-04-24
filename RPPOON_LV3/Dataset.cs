@@ -50,7 +50,7 @@ namespace RPPOON_LV3
              obzirom da im je referenca na istom podatku. Također koristimo li plitko kopiranje i pozovemo meodu Clear, koja briše sve elemente liste
              obrisat će nam se oba objekta. Stoga je i dalje preporučljivo koristiti duboko kopiranje*/
 
-            // return (Prototype)this.MemberwiseClone();    //shallow copy
+            // return (IPrototype)this.MemberwiseClone();    //shallow copy
 
             Dataset clone = new Dataset();
 
