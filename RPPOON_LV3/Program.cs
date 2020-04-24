@@ -9,14 +9,21 @@ namespace RPPOON_LV3
             Dataset firstDataSet = new Dataset("CSV.txt");
             Dataset firstDataSetClone = (Dataset)firstDataSet.Clone();
 
-            
+            ConsoleNotification notification = new ConsoleNotification("Valentin Loboda", "Test, proba- 1, 2. 1, 2.",
+      "neki tekst", DateTime.Now, Category.INFO, ConsoleColor.DarkCyan);
+
+            NotificationManager manager = new NotificationManager();
+
+            manager.Display(notification);
+
+
             //     firstDataSetClone.SetData(1, 3, " h");
 
 
 
 
-            
-                for (int i = 0; i < firstDataSetClone.GetData().Count; i++)
+
+            for (int i = 0; i < firstDataSetClone.GetData().Count; i++)
                 {
                     for (int j = 0; j < firstDataSetClone.GetData()[i].Count; j++)
                     {

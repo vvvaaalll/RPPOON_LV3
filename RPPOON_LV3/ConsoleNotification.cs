@@ -14,6 +14,8 @@ namespace RPPOON_LV3
         public DateTime Timestamp { get; private set; }
         public Category Level { get; private set; }
         public ConsoleColor Color { get; private set; }
+
+
         public ConsoleNotification(String author, String title,
         String text, DateTime time, Category level, ConsoleColor color)
         {
