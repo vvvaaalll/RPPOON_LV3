@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RPPOON_LV3
 {
-    class Dataset : Prototype
+    class Dataset : IPrototype
     {
         private List<List<string>> data; //list of lists of strings
         public Dataset()
@@ -42,7 +42,7 @@ namespace RPPOON_LV3
             this.data.Clear();
         }
 
-        public Prototype Clone()
+        public IPrototype Clone()
         {
 
             /*u danom primjeru razlike između dubokog i plitkog kopiranja gotovo nema obzirom da nemamo metodu kojom možemo
@@ -67,17 +67,7 @@ namespace RPPOON_LV3
 
         }
 
-        public void PrintToConsole()
-        {
-            for (int i = 0; i < data.Count; i++)
-            {
-                for (int j = 0; j < data[i].Count; j++)
-                {
-                    Console.Write(data[i][j]);
-                }
-                Console.WriteLine();
-            }
-        }
+  
 
         //public void SetData(int i, int j, string value)
         //{

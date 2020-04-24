@@ -22,24 +22,31 @@ namespace RPPOON_LV3
                 }
                 return instance;
             }
-            public int[ , ] NextInt(int m, int n)
+
+
+        /*
+         Singleton sadrži instancu svoje klase, što omogućuje korištenje te instance klase, bez nepotrebnog stvaranja novih
+         RandomGenerator sadrži metodu koja vraća instancu klase(ukoliko ona još nije kreirana stvara novu), defaultni konstruktor
+         te metodu za kreiranje matrica m*n dimenzija
+             */
+
+
+            public double[ , ] NextDouble(int m, int n)
             {
 
-            int[,] matrix = new int[m,n];
+            double[,] matrix = new double[m,n];
 
 
             for (int i = 0; i < m; i++) 
             {
                 for (int j = 0; j < n; j++) 
                 {
-                    matrix[i, j] = generator.Next(1 ,5);
+                    matrix[i, j] = generator.NextDouble();
                                         
                 }
                     
             
             }
-
-
 
             return matrix;
 

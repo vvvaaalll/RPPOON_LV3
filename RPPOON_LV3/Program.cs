@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace RPPOON_LV3
-{
+{   
     class Program
     {
         static void Main(string[] args)
@@ -9,17 +9,37 @@ namespace RPPOON_LV3
             Dataset firstDataSet = new Dataset("CSV.txt");
             Dataset firstDataSetClone = (Dataset)firstDataSet.Clone();
 
-            firstDataSet.PrintToConsole();
-       //     firstDataSetClone.SetData(1, 3, " h");
-            firstDataSetClone.PrintToConsole();
+            
+            //     firstDataSetClone.SetData(1, 3, " h");
 
-            firstDataSet.PrintToConsole();
-            firstDataSetClone.PrintToConsole();
 
-            firstDataSet.ClearData();
 
-            firstDataSet.PrintToConsole();
-            firstDataSetClone.PrintToConsole();
+
+            
+                for (int i = 0; i < firstDataSetClone.GetData().Count; i++)
+                {
+                    for (int j = 0; j < firstDataSetClone.GetData()[i].Count; j++)
+                    {
+                        Console.Write(firstDataSetClone.GetData()[i][j]);
+                    }
+                    Console.WriteLine();
+                }
+
+
+                //provjera 3. zadatka
+
+            Logger log = new Logger("zad3.txt");
+            for (int i = 0; i < firstDataSetClone.GetData().Count; i++)
+            {
+                for (int j = 0; j < firstDataSetClone.GetData()[i].Count; j++)
+                {
+                    log.ToFile(firstDataSetClone.GetData()[i][j]);
+                }
+               
+            }
+
+
+
         }
     }
 }

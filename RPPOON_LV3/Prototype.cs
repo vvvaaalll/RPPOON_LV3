@@ -4,8 +4,8 @@ using System.Text;
 
 namespace RPPOON_LV3
 {
-    interface Prototype
+    interface IPrototype
     {
-        Prototype Clone();
+        IPrototype Clone();
     }
 }
