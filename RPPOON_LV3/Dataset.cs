@@ -45,7 +45,7 @@ namespace RPPOON_LV3
         public Prototype Clone()
         {
 
-            /*u danom primjeru razlike između dubokog i plitkog kopiranja gotovo nema obzirom da nemamo naredbu kojom možemo
+            /*u danom primjeru razlike između dubokog i plitkog kopiranja gotovo nema obzirom da nemamo metodu kojom možemo
              mijenjati objekte klase. dodamo li setter i koristimo plitko kopiranje nastat će problem jer će se, pri izmjeni jednog objekta, mijenjati oba,
              obzirom da im je referenca na istom podatku. Također koristimo li plitko kopiranje i pozovemo meodu Clear, koja briše sve elemente liste
              obrisat će nam se oba objekta. Stoga je i dalje preporučljivo koristiti duboko kopiranje*/
